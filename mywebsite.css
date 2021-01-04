@@ -1,0 +1,208 @@
+html,
+body {
+  height: 100%;
+  /* margin:0;
+    padding:0; */
+}
+
+#first {
+  background-color: #43464b;
+  width: 100%;
+  min-height: 100%;
+  align-content: center;
+}
+
+#bild {
+  height: 50vh;
+  width: auto;
+  margin-top: 150px;
+  opacity: 75%;
+  /* filter: blur(2px) */
+}
+
+#second {
+  /* background-color: #ff7675; */
+  background-color: #ffa000;
+  /* background-color: #ff5e00; */
+  width: auto;
+  min-height: 100%;
+}
+
+#third {
+  background-color: #39eb42;
+  width: auto;
+  min-height: 100%;
+}
+
+#fourth {
+  background-color: #75c8ff;
+  width: auto;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  font-family: anivers, sans-serif;
+  color: white;
+}
+
+#columns {
+  top: 100px;
+}
+
+#logos {
+  font-size: 65px;
+  padding: 10px;
+}
+
+/* animation first part home */
+.first_home {
+  animation-name: animated_description1;
+  animation-duration: 0.9s;
+  width: 100%;
+}
+
+@keyframes animated_description1 {
+  0% {
+    margin-top: -150%;
+  }
+
+  80% {
+    margin-top: 0%;
+  }
+}
+
+/* animation second part home */
+.second_home {
+  animation-name: animated_description2;
+  animation-duration: 0.9s;
+  width: 100%;
+}
+
+@keyframes animated_description2 {
+  0% {
+    margin-left: -150%;
+  }
+
+  80% {
+    margin-left: 0%;
+  }
+}
+
+/* animation third part home */
+@keyframes animated_description3 {
+  0% {
+    right: -150%;
+  }
+
+  80% {
+    right: 0%;
+  }
+}
+
+.third_home {
+  animation-name: animated_description3;
+  animation-duration: 0.9s;
+  width: 100%;
+}
+
+@keyframes animated_description {
+  0% {
+    margin-left: -150%;
+  }
+
+  80% {
+    margin-left: 0%;
+  }
+}
+/* Animation Description About me */
+.first_trans {
+  animation-name: animated_description;
+  animation-duration: 0.8s;
+  width: 100%;
+}
+
+.skills {
+  height: 30px;
+  width: 0px;
+  background-color: #0f5298;
+  margin-top: -9px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#skills {
+  margin-top: 90px;
+}
+.scroll-indicator-controller {
+  position: fixed;
+  top: 50vh;
+  transform: translate(0, -50%);
+  right: 20px;
+  z-index: 999;
+}
+.scroll-indicator-controller.indi-mobile > div span {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .scroll-indicator-controller {
+    right: 10px;
+  }
+}
+.scroll-indicator-controller > div {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0 0 10px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  will-change: transition;
+}
+.scroll-indicator-controller > div span {
+  color: white;
+  position: absolute;
+  right: calc(100% + 8px);
+  white-space: nowrap;
+  top: -1px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  line-height: 17px;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.4s ease;
+  will-change: transition;
+}
+@media (hover: none) {
+  .scroll-indicator-controller > div span {
+    display: none;
+  }
+}
+.scroll-indicator-controller > div span:after {
+  content: "-----";
+  padding-left: 5px;
+  letter-spacing: -2px;
+  font-family: arial, sans-serif;
+  vertical-align: text-top;
+}
+@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .scroll-indicator-controller > div:hover span {
+    width: auto;
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0);
+  }
+}
+.scroll-indicator-controller > div.active {
+  background: white;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+@supports (-ms-ime-align: auto) {
+  .scroll-indicator-controller > div span {
+    transition: opacity 0.4s ease;
+  }
+}
